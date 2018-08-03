@@ -1,19 +1,21 @@
 import { createAction, handleActions } from 'redux-actions';
 import { Map, List } from 'immutable';
 
-const CREATE = 'counter/CREATE';
+//Actions Type Defined
+const CREATE = 'counter/CREATE'; 
 const REMOVE = 'counter/REMOVE';
 const INCREMENT = 'counter/INCREMENT';
 const DECREMENT = 'counter/DECREMENT';
 const SET_COLOR = 'counter/SET_COLOR';
 
-
+// Export the Actions
 export const create = createAction(CREATE);
 export const remove = createAction(REMOVE);
 export const increment = createAction(INCREMENT);
 export const decrement = createAction(DECREMENT);
 export const setColor = createAction(SET_COLOR);
 
+//Defined the InitialState
 const initialState = Map({
     counters: List([
         Map({
@@ -23,6 +25,8 @@ const initialState = Map({
     ])
 });
 
+
+//Actions Handler: [] !
 export default handleActions({
     [CREATE]: (state, action) => {
         const counters = state.get('counters');
