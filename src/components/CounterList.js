@@ -9,7 +9,7 @@ const CounterList = ({counters, onIncrement, onDecrement, onSetColor}) => {
             <Counter 
                 key={i}
                 index={i}
-                {...counter}
+                {...counter.toJS()}
                 onIncrement={onIncrement}
                 onDecrement={onDecrement}
                 onSetColor={onSetColor} 
